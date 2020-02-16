@@ -17,9 +17,16 @@
 <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 <script type="text/babel">
+
+    function MyFirstComponent() {
+        return (
+            <div>
+                <h1>Raphael Vidal</h1>
+            </div>
+        )
+    }
     const idDiv = document.getElementById('minhaDiv')
-    let nome = 'Raphael Ribeiro Vidal'
-    ReactDOM.render(<h1>{nome}</h1>, idDiv)
+    ReactDOM.render(<MyFirstComponent />, idDiv)
 </script>
 
 </html>
