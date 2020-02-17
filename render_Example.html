@@ -11,6 +11,9 @@
     <div id="minhaDiv">
 
     </div>
+    <div id="minhaDivComClass">
+
+    </div>
 </body>
 
 <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
@@ -27,8 +30,23 @@
             </div>
         )
     }
+
+    class MinhaClasseComponente extends React.Component {
+        render() {
+            return (
+                <div>
+                    <h1>Componente com class</h1>
+                    <p>Creating by class</p>
+                </div>
+            )
+        }
+    }
+
+
     const idDiv = document.getElementById('minhaDiv')
     ReactDOM.render(<MyFirstComponent />, idDiv)
+    const idDivClass = document.getElementById('minhaDivComClass')
+    ReactDOM.render(<MinhaClasseComponente />, idDivClass)
 </script>
 
 </html>
