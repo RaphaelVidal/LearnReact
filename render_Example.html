@@ -42,11 +42,40 @@
         }
     }
 
+    class MinhaClasseAComponente extends React.Component {
+        render() {
+            return (
+                <div>
+                    <h1>Minha Classe A Componente</h1>
+                </div>
+            )
+        }
+    }
+    class MinhaClasseBComponente extends React.Component {
+        render() {
+            return (
+                <div>
+                    <h1>Minha Classe B Componente</h1>
+                </div>
+            )
+        }
+    }
+    class MinhaClasseCComponente extends React.Component {
+        render() {
+            return (
+                <div>
+                  <MinhaClasseAComponente />
+                  <hr/>
+                  <MinhaClasseBComponente />
+                </div>
+            )
+        }
+    }
 
     const idDiv = document.getElementById('minhaDiv')
     ReactDOM.render(<MyFirstComponent />, idDiv)
     const idDivClass = document.getElementById('minhaDivComClass')
-    ReactDOM.render(<MinhaClasseComponente />, idDivClass)
+    ReactDOM.render(<MinhaClasseCComponente />, idDivClass)
 </script>
 
 </html>
