@@ -26,6 +26,7 @@
             <div>
                 <h1>{props.nome}</h1>
                 <p>Creating my first component</p>
+                <p>Valor passado: {props.valor}</p>
             </div>
         )
     }
@@ -36,6 +37,7 @@
                 <div>
                     <h1>Componente com  criado por {this.props.nome}</h1>
                     <p>Creating by class</p>
+                    <p>Valor passado: {this.props.valor}</p>
                 </div>
             )
         }
@@ -43,9 +45,9 @@
 
 
     const idDiv = document.getElementById('minhaDiv')
-    ReactDOM.render(<MyFirstComponent nome="Raphael" />, idDiv)
+    ReactDOM.render(<MyFirstComponent nome="Raphael" valor={2}/>, idDiv)
     const idDivClass = document.getElementById('minhaDivComClass')
-    ReactDOM.render(<MinhaClasseComponente nome="Emanuella" />, idDivClass)
+    ReactDOM.render(<MinhaClasseComponente nome="Emanuella"  valor={5}/>, idDivClass)
 </script>
 
 </html>
