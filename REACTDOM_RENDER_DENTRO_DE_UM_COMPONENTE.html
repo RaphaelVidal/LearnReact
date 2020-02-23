@@ -32,17 +32,23 @@
     }
 
     class ObjetoTempo extends React.Component {
-
-
+        constructor() {
+            super()
+            this.state = {
+                nome: "Raphael",
+                sobrenome: "Vidal"
+            }
+        }
         render() {
             return (
                 <div>
+                    <h1>Olá {this.state.nome} {this.state.sobrenome}</h1>
                     <h1> Hora Atual</h1>
                     <p>{new Date().toLocaleTimeString()}</p>
                 </div>
             )
-        } 
-       
+        }
+
     }
 
     ReactDOM.render(<ObjetoTempo />, document.getElementById('minhaDiv'))
