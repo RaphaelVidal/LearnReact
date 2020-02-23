@@ -40,9 +40,10 @@
             }
         }
         render() {
+            this.state.minhaidade = this.props.idade
             return (
                 <div>
-                    <h1>Olá {this.state.nome} {this.state.sobrenome}</h1>
+                    <h1>Olá {this.state.nome} {this.state.sobrenome} de idade {this.state.minhaidade}</h1>
                     <h1> Hora Atual</h1>
                     <p>{new Date().toLocaleTimeString()}</p>
                 </div>
@@ -51,12 +52,12 @@
 
     }
 
-    ReactDOM.render(<ObjetoTempo />, document.getElementById('minhaDiv'))
+    ReactDOM.render(<ObjetoTempo idade="32"/>, document.getElementById('minhaDiv'))
 
     // Tempo()
 
     setInterval(() => {
-        ReactDOM.render(<ObjetoTempo />, document.getElementById('minhaDiv'))
+        ReactDOM.render(<ObjetoTempo idade="32"/>, document.getElementById('minhaDiv'))
     }, 1000);
 </script>
 
