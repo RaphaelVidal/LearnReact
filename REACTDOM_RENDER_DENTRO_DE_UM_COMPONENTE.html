@@ -9,7 +9,7 @@
 
 <body>
     <div id="minhaDiv">
-     
+
     </div>
 
 </body>
@@ -19,22 +19,39 @@
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 <script type="text/babel">
 
-function Tempo() {
-    //JSX a Renderizar
-    const conteudo = (
-        <div>
-            <h1> Hora Atual</h1>
-            <p>{new Date().toLocaleTimeString()}</p>
-        </div> 
-    )
-    ReactDOM.render(conteudo,document.getElementById('minhaDiv'))
-   
-}
-   Tempo()
+    function Tempo() {
+        //JSX a Renderizar
+        const conteudo = (
+            <div>
+                <h1> Hora Atual</h1>
+                <p>{new Date().toLocaleTimeString()}</p>
+            </div>
+        )
+        ReactDOM.render(conteudo, document.getElementById('minhaDiv'))
 
-   setInterval(() => {
-       Tempo()
-   }, 1000);
+    }
+
+    class ObjetoTempo extends React.Component {
+
+
+        render() {
+            return (
+                <div>
+                    <h1> Hora Atual</h1>
+                    <p>{new Date().toLocaleTimeString()}</p>
+                </div>
+            )
+        } 
+       
+    }
+
+    ReactDOM.render(<ObjetoTempo />, document.getElementById('minhaDiv'))
+
+    // Tempo()
+
+    setInterval(() => {
+        ReactDOM.render(<ObjetoTempo />, document.getElementById('minhaDiv'))
+    }, 1000);
 </script>
 
 </html>
